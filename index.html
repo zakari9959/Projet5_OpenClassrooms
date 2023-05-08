@@ -4,7 +4,7 @@
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Nina Carducci Photographe - Portfolio</title>
-	<link rel="stylesheet" href="./assets/bootstrap/bootstrap.css">
+	<link rel="stylesheet" href="./assets/bootstrap/bootstrap.min.css">
 	<link rel="stylesheet" href="./assets/style.css">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,22 +12,21 @@
 		href="https://fonts.googleapis.com/css2?family=Inter&family=Spectral:ital,wght@0,400;1,300;1,400;1,800&display=swap"
 		rel="stylesheet">
 	<meta charset="UTF-8">
-	<script src="./assets/bootstrap/bootstrap.bundle.js"></script>
+	<script src="./assets/bootstrap/bootstrap.bundle.min.js"></script>
 	<script src="https://code.jquery.com/jquery-3.4.1.min.js"
 		integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 	<script src="./assets/maugallery.js"></script>
 	<script src="./assets/scripts.js"></script>
-	<meta name="description" content="Portfolio de Nina Carducci, une photographe sur le secteur d'Île-de-France">
-	<meta name="keywors" content="Photographe,Concert,Entreprises,Mariage,Portrait">
+	<meta name="description" content="Portfolio de Nina Carducci, une photographe sur le secteur de Bordeaux">
 	<meta name="author" content="Nina Carducci">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<script type='application/ld+json'>
 		{
 		  "@context": "http://www.schema.org",
+		  "@type": "ProfessionalService",
 		  "name": "Nina Carducci - Photographe",
 		  "url": "https://zakari9959.github.io/Projet5_OpenClassrooms/",
-		  "logo": "./assets/imagessmall/nina.webp",
-		  "image": "./assets/imagessmall/slider/edward-cisneros-photo.webp",
+		  "image": "./assets/imagessmall/nina.webp",
 		  "description": "Photographe sur Bordeaux , Concert , Mariage , Entreprise , Portrait",
 		  "address": {
 			 "@type": "PostalAddress",
@@ -44,14 +43,14 @@
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:description" content="Photographe Nina Carducci">
 	<meta name="twitter:title"
-		content="Vous cherchez une photographe sur Paris, venez voir le portfolio de Nina Carducci">
+		content="Vous cherchez une photographe sur Bordeaux, venez voir le portfolio de Nina Carducci">
 	<meta name="twitter:site" content="@ninacarducci">
 	<meta name="twitter:image" content="./assets/imagessmall/nina.webp" />
 	<meta name="twitter:creator" content="@ninacarducci" />
 	<meta property="og:title" content="Nina Carducci Photographe - Portfolio" />
-	<meta property="og:description" content="Portfolio de Nina Carducci, une photographe sur le secteur d'Île-de-France" />
+	<meta property="og:description" content="Portfolio de Nina Carducci, une photographe sur le secteur de Bordeaux" />
 	<meta property="og:image" content="./assets/imagessmall/nina.webp" />
-	<meta property="og:url" content="index.html" />
+	<meta property="og:url" content="https://zakari9959.github.io/Projet5_OpenClassrooms/"/>
 </head>
 
 <body>
@@ -64,7 +63,7 @@
 				<li><a href="#services">Service</a></li>
 				<li><a href="#contact">Contact</a></li>
 				<li><a class="social-link" href="https://www.instagram.com/ninacarducci.photo/?hl=fr"
-						target="_blank"><img src="assets/images/instagram.png" alt="logo instagram"></a></li>
+						target="_blank"><img src="assets/images/instagram.png" alt="logo instagram" width="20" height="20"></a></li>
 			</ul>
 		</div>
 	</div>
@@ -82,15 +81,15 @@
 			<div class="carousel-inner">
 				<div class="carousel-item active">
 					<img src="./assets/imagessmall/slider/ryoji-iwata-photo.webp" class="d-block w-100"
-						alt="photo d'un homme sur un passage piéton" style="width:100%; height:auto;">
+						alt="photo d'un homme sur un passage piéton" width="1100" height="auto">
 				</div>
 				<div class="carousel-item">
 					<img src="./assets/imagessmall/slider/nicholas-green-photo.webp" class="d-block w-100"
-						alt="photo d'une foule de spectateur à un concert" style="width:100%; height:auto;">
+						alt="photo d'une foule de spectateur à un concert" width="1100" height="auto">
 				</div>
 				<div class="carousel-item">
 					<img src="./assets/imagessmall/slider/edward-cisneros-photo.webp" class="d-block w-100"
-						alt="photo de mariage" style="width:100%; height:auto;">
+						alt="photo de mariage" width="1100" height="auto">
 				</div>
 			</div>
 			<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
@@ -107,7 +106,7 @@
 	</div>
 	<div id="about">
 		<div class="picture left">
-			<img src="./assets/imagessmall/nina.webp" alt="portrait de la photographe">
+			<img src="./assets/imagessmall/nina.webp" alt="portrait de la photographe" width="259" height="259">
 		</div>
 		<div id="about-me">
 			<h2 class="about-me__title">A propos de moi</h2>
@@ -128,21 +127,22 @@
 			<div class="gallery" style="display: none">
 				<img data-gallery-tag="Concert" class="gallery-item"
 					src="./assets/imagessmall/gallery/concerts/aaron-paul-photo.webp"
-					alt="photo d'un concert de Aaron Paul" loading="lazy" width="254px" height="254px">
+					alt="photo d'un concert de Aaron Paul" loading="lazy" width="254" height="254">
 				<img data-gallery-tag="Entreprises" class="gallery-item"
 					src="./assets/imagessmall/gallery/entreprise/ali-morshedlou-photo.webp"
-					alt="photo d'un homme d'affaire" loading="lazy" width="254px" height="254px">
+					alt="photo d'un homme d'affaire" loading="lazy" width="254" height="254">
 				<img data-gallery-tag="Entreprises" class="gallery-item"
 					src="./assets/imagessmall/gallery/entreprise/jason-goodman-photo.webp"
-					alt="photo d'une femme en réunion" loading="lazy" width="254px" height="254px">
+					alt="photo d'une femme en réunion" loading="lazy" width="254" height="254">
 				<img data-gallery-tag="Mariages" class="gallery-item"
-					src="./assets/imagessmall/gallery/mariage/hannah-busing-photo.webp"
-					alt="photo de mains de mariés" loading="lazy" width="254px" height="254px">
+					src="./assets/imagessmall/gallery/mariage/hannah-busing-photo.webp" alt="photo de mains de mariés"
+					loading="lazy" width="254" height="254">
 				<img data-gallery-tag="Portrait" class="gallery-item"
-					src="./assets/imagessmall/gallery/portraits/ade-tunji-photo.webp" alt="portrait d'un homme" loading="lazy">
+					src="./assets/imagessmall/gallery/portraits/ade-tunji-photo.webp" alt="portrait d'un homme"
+					loading="lazy">
 				<img data-gallery-tag="Mariages" class="gallery-item"
-					src="./assets/imagessmall/gallery/mariage/jakob-owens-photo.webp"
-					alt="photo d'un couple de mariés" loading="lazy" width="254px" height="254px">
+					src="./assets/imagessmall/gallery/mariage/jakob-owens-photo.webp" alt="photo d'un couple de mariés"
+					loading="lazy" width="254" height="254">
 				<img data-gallery-tag="Portrait" class="gallery-item"
 					src="./assets/imagessmall/gallery/portraits/nino-van-prattenburg-photo.webp"
 					alt="portrait d'une femme" loading="lazy" width="254px" height="254px">
@@ -172,8 +172,8 @@
 			<div class="service">
 				<div class="service__description">
 					<h3>Shooting photo</h3>
-					<p>Pour capturer vos moments les plus précieux et garder un souvenir impérissable. Je me déplace en
-						Île-de-France pour réaliser vos photos</p>
+					<p>Pour capturer vos moments les plus précieux et garder un souvenir impérissable. Je me déplace
+						autour de Bordeaux pour réaliser vos photos</p>
 				</div>
 				<div class="service__price">
 					<h4>350€/demi journée</h4>
