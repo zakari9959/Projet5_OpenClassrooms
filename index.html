@@ -12,7 +12,7 @@
 		href="https://fonts.googleapis.com/css2?family=Inter&family=Spectral:ital,wght@0,400;1,300;1,400;1,800&display=swap"
 		rel="stylesheet">
 	<meta charset="UTF-8">
-	<script src="./assets/bootstrap/bootstrap.bundle.min.js"></script>
+	<script src="./assets/bootstrap/bootstrap.bundle.min.js" defer></script>
 	<script src="https://code.jquery.com/jquery-3.4.1.min.js"
 		integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 	<script src="./assets/maugallery.js"></script>
@@ -41,34 +41,21 @@
 		}
 		</script>
 	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="twitter:description" content="Photographe Nina Carducci">
-	<meta name="twitter:title"
-		content="Vous cherchez une photographe sur Bordeaux, venez voir le portfolio de Nina Carducci">
+	<meta name="twitter:description" content="Portfolio de Nina Carducci, une photographe sur le secteur de Bordeaux">
+	<meta name="twitter:title" content="Nina Carducci Photographe - Portfolio">
 	<meta name="twitter:site" content="@ninacarducci">
-	<meta name="twitter:image" content="./assets/imagessmall/nina.webp" />
+	<meta name="twitter:image"
+		content="https://zakari9959.github.io/Projet5_OpenClassrooms/assets/imagessmall/nina.webp" />
 	<meta name="twitter:creator" content="@ninacarducci" />
 	<meta property="og:title" content="Nina Carducci Photographe - Portfolio" />
 	<meta property="og:description" content="Portfolio de Nina Carducci, une photographe sur le secteur de Bordeaux" />
-	<meta property="og:image" content="./assets/imagessmall/nina.webp" />
-	<meta property="og:url" content="https://zakari9959.github.io/Projet5_OpenClassrooms/"/>
+	<meta property="og:image"
+		content="https://zakari9959.github.io/Projet5_OpenClassrooms/assets/imagessmall/nina.webp" />
+	<meta property="og:url" content="https://zakari9959.github.io/Projet5_OpenClassrooms/" />
 </head>
 
 <body>
-	<div class="top-header">
-		<h1 class="name">Nina Carducci</h1>
-		<div class="nav">
-			<ul>
-				<li><a href="#about">À propos</a></li>
-				<li><a href="#gallery">Galerie</a></li>
-				<li><a href="#services">Service</a></li>
-				<li><a href="#contact">Contact</a></li>
-				<li><a class="social-link" href="https://www.instagram.com/ninacarducci.photo/?hl=fr"
-						target="_blank"><img src="assets/images/instagram.png" alt="logo instagram" width="20" height="20"></a></li>
-			</ul>
-		</div>
-	</div>
-	<div id="header">
-
+	<header>
 		<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
 			<div class="carousel-indicators">
 				<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
@@ -79,18 +66,27 @@
 					aria-label="Slide 3"></button>
 			</div>
 			<div class="carousel-inner">
-				<div class="carousel-item active">
+				<picture class="carousel-item ">
+					<source media="(max-width: 650px)"
+						srcset="./assets/imagessmall/slider/ryoji-iwata-photo-mobile.webp" width="900">
+					<source media="(min-width: 651px)" srcset="./assets/imagessmall/slider/ryoji-iwata-photo.webp">
 					<img src="./assets/imagessmall/slider/ryoji-iwata-photo.webp" class="d-block w-100"
-						alt="photo d'un homme sur un passage piéton" width="1100" height="auto">
-				</div>
-				<div class="carousel-item">
+						alt="photo d'un homme sur un passage piéton" width="1100">
+				</picture>
+				<picture class="carousel-item">
+					<source media="(max-width: 650px)"
+						srcset="./assets/imagessmall/slider/nicholas-green-photo-mobile.webp" width="900">
+					<source media="(min-width: 651px)" srcset="./assets/imagessmall/slider/nicholas-green-photo.webp">
 					<img src="./assets/imagessmall/slider/nicholas-green-photo.webp" class="d-block w-100"
-						alt="photo d'une foule de spectateur à un concert" width="1100" height="auto">
-				</div>
-				<div class="carousel-item">
+						alt="photo d'une foule de spectateur à un concert" width="1100">
+				</picture>
+				<picture class="carousel-item active">
+					<source media="(max-width: 650px)"
+						srcset="./assets/imagessmall/slider/edward-cisneros-photo-mobile.webp" width="900">
+					<source media="(min-width: 651px)" srcset="./assets/imagessmall/slider/edward-cisneros-photo.webp">
 					<img src="./assets/imagessmall/slider/edward-cisneros-photo.webp" class="d-block w-100"
-						alt="photo de mariage" width="1100" height="auto">
-				</div>
+						alt="photo de mariage" width="1100">
+				</picture>
 			</div>
 			<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
 				data-bs-slide="prev">
@@ -103,10 +99,28 @@
 				<span class="visually-hidden">Next</span>
 			</button>
 		</div>
-	</div>
+		<div class="top-header">
+			<h1 class="name">Nina Carducci</h1>
+			<div class="nav">
+				<ul>
+					<li><a href="#about">À propos</a></li>
+					<li><a href="#gallery">Galerie</a></li>
+					<li><a href="#services">Service</a></li>
+					<li><a href="#contact">Contact</a></li>
+					<li><a class="social-link" href="https://www.instagram.com/ninacarducci.photo/?hl=fr"
+							target="_blank"><img src="assets/images/instagram.png" alt="logo instagram" width="20"
+								height="20"></a></li>
+				</ul>
+			</div>
+		</div>
+	</header>
 	<div id="about">
 		<div class="picture left">
-			<img src="./assets/imagessmall/nina.webp" alt="portrait de la photographe" width="259" height="259">
+			<picture>
+				<source media="(max-width: 650px)" srcset="./assets/imagessmall/nina-mobile.webp">
+				<source media="(min-width: 651px)" srcset="./assets/imagessmall/nina.webp">
+				<img src="./assets/imagessmall/nina.webp" alt="portrait de la photographe" loading="lazy">
+			</picture>
 		</div>
 		<div id="about-me">
 			<h2 class="about-me__title">A propos de moi</h2>
@@ -125,33 +139,78 @@
 		<h2 class="title">Portfolio</h2>
 		<div class="container py-3">
 			<div class="gallery" style="display: none">
-				<img data-gallery-tag="Concert" class="gallery-item"
-					src="./assets/imagessmall/gallery/concerts/aaron-paul-photo.webp"
-					alt="photo d'un concert de Aaron Paul" loading="lazy" width="254" height="254">
-				<img data-gallery-tag="Entreprises" class="gallery-item"
-					src="./assets/imagessmall/gallery/entreprise/ali-morshedlou-photo.webp"
-					alt="photo d'un homme d'affaire" loading="lazy" width="254" height="254">
-				<img data-gallery-tag="Entreprises" class="gallery-item"
-					src="./assets/imagessmall/gallery/entreprise/jason-goodman-photo.webp"
-					alt="photo d'une femme en réunion" loading="lazy" width="254" height="254">
-				<img data-gallery-tag="Mariages" class="gallery-item"
-					src="./assets/imagessmall/gallery/mariage/hannah-busing-photo.webp" alt="photo de mains de mariés"
-					loading="lazy" width="254" height="254">
-				<img data-gallery-tag="Portrait" class="gallery-item"
-					src="./assets/imagessmall/gallery/portraits/ade-tunji-photo.webp" alt="portrait d'un homme"
-					loading="lazy">
-				<img data-gallery-tag="Mariages" class="gallery-item"
-					src="./assets/imagessmall/gallery/mariage/jakob-owens-photo.webp" alt="photo d'un couple de mariés"
-					loading="lazy" width="254" height="254">
-				<img data-gallery-tag="Portrait" class="gallery-item"
-					src="./assets/imagessmall/gallery/portraits/nino-van-prattenburg-photo.webp"
-					alt="portrait d'une femme" loading="lazy" width="254px" height="254px">
-				<img data-gallery-tag="Concert" class="gallery-item"
-					src="./assets/imagessmall/gallery/concerts/austin-neill-photo.webp"
-					alt="photo du concert d'Austin Neill" loading="lazy" width="254px" height="254px">
-				<img data-gallery-tag="Entreprises" class="gallery-item"
-					src="./assets/imagessmall/gallery/entreprise/mateus-campos-felipe-photo.webp"
-					alt="photo d'une femme à son bureau" loading="lazy" width="254px" height="254px">
+				<picture data-gallery-tag="Concert" class="gallery-item">
+					<source media="(max-width: 650px)"
+						srcset="./assets/imagessmall/gallery/concerts/aaron-paul-photo-mobile.webp">
+					<source media="(min-width: 651px)"
+						srcset="./assets/imagessmall/gallery/concerts/aaron-paul-photo.webp">
+					<img src="./assets/imagessmall/gallery/concerts/aaron-paul-photo.webp"
+						alt="photo d'un concert de Aaron Paul" loading="lazy" width="254" height="254">
+				</picture>
+				<picture data-gallery-tag="Entreprises" class="gallery-item">
+					<source media="(max-width: 650px)"
+						srcset="./assets/imagessmall/gallery/entreprise/ali-morshedlou-photo-mobile.webp">
+					<source media="(min-width: 651px)"
+						srcset="./assets/imagessmall/gallery/entreprise/ali-morshedlou-photo.webp">
+					<img src="./assets/imagessmall/gallery/entreprise/ali-morshedlou-photo.webp"
+						alt="photo d'un homme d'affaire" loading="lazy" width="254" height="254">
+				</picture>
+				<picture data-gallery-tag="Entreprises" class="gallery-item">
+					<source media="(max-width: 650px)"
+						srcset="./assets/imagessmall/gallery/entreprise/jason-goodman-photo-mobile.webp">
+					<source media="(min-width: 651px)"
+						srcset="./assets/imagessmall/gallery/entreprise/jason-goodman-photo.webp">
+					<img src="./assets/imagessmall/gallery/entreprise/jason-goodman-photo.webp"
+						alt="photo d'une femme en réunion" loading="lazy" width="254" height="254">
+				</picture>
+				<picture data-gallery-tag="Mariages" class="gallery-item">
+					<source media="(max-width: 650px)"
+						srcset="./assets/imagessmall/gallery/mariage/hannah-busing-photo-mobile.webp">
+					<source media="(min-width: 651px)"
+						srcset="./assets/imagessmall/gallery/mariage/hannah-busing-photo.webp">
+					<img src="./assets/imagessmall/gallery/mariage/hannah-busing-photo.webp"
+						alt="photo de mains de mariés" loading="lazy" width="254" height="254">
+				</picture>
+				<picture data-gallery-tag="Portrait" class="gallery-item">
+					<source media="(max-width: 650px)"
+						srcset="./assets/imagessmall/gallery/portraits/ade-tunji-photo-mobile.webp">
+					<source media="(min-width: 651px)"
+						srcset="./assets/imagessmall/gallery/portraits/ade-tunji-photo.webp">
+					<img src="./assets/imagessmall/gallery/portraits/ade-tunji-photo.webp" alt="portrait d'un homme"
+						loading="lazy" width="254" height="254">
+				</picture>
+				<picture data-gallery-tag="Mariages" class="gallery-item">
+					<source media="(max-width: 650px)"
+						srcset="./assets/imagessmall/gallery/mariage/jakob-owens-photo-mobile.webp">
+					<source media="(min-width: 651px)"
+						srcset="./assets/imagessmall/gallery/mariage/jakob-owens-photo.webp">
+					<img src="./assets/imagessmall/gallery/mariage/jakob-owens-photo.webp"
+						alt="photo d'un couple de mariés" loading="lazy" width="254" height="254">
+				</picture>
+				<picture data-gallery-tag="Portrait" class="gallery-item">
+					<source media="(max-width: 650px)"
+						srcset="./assets/imagessmall/gallery/portraits/nino-van-prattenburg-photo-mobile.webp">
+					<source media="(min-width: 651px)"
+						srcset="./assets/imagessmall/gallery/portraits/nino-van-prattenburg-photo.webp">
+					<img src="./assets/imagessmall/gallery/portraits/nino-van-prattenburg-photo.webp"
+						alt="portrait d'une femme" loading="lazy" width="254px" height="254px">
+				</picture>
+				<picture data-gallery-tag="Concert" class="gallery-item">
+					<source media="(max-width: 650px)"
+						srcset="./assets/imagessmall/gallery/concerts/austin-neill-photo-mobile.webp">
+					<source media="(min-width: 651px)"
+						srcset="./assets/imagessmall/gallery/concerts/austin-neill-photo.webp">
+					<img src="./assets/imagessmall/gallery/concerts/austin-neill-photo.webp"
+						alt="photo du concert d'Austin Neill" loading="lazy" width="254px" height="254px">
+				</picture>
+				<picture data-gallery-tag="Entreprises" class="gallery-item">
+					<source media="(max-width: 650px)"
+						srcset="./assets/imagessmall/gallery/entreprise/mateus-campos-felipe-photo-mobile.webp">
+					<source media="(min-width: 651px)"
+						srcset="./assets/imagessmall/gallery/entreprise/mateus-campos-felipe-photo.webp">
+					<img src="./assets/imagessmall/gallery/entreprise/mateus-campos-felipe-photo.webp"
+						alt="photo d'une femme à son bureau" loading="lazy" width="254px" height="254px">
+				</picture>
 			</div>
 		</div>
 		<div class="quote">
@@ -230,7 +289,11 @@
 				</form>
 			</div>
 			<div class="picture right">
-				<img src="./assets/imagessmall/camera.webp" alt="photo d'un appareil photo" loading="lazy">
+				<picture>
+					<source media="(max-width: 650px)" srcset="./assets/imagessmall/camera-mobile.webp">
+					<source media="(min-width: 651px)" srcset="./assets/imagessmall/camera.webp">
+					<img src="./assets/imagessmall/camera.webp" alt="photo d'un appareil photo" loading="lazy">
+				</picture>
 			</div>
 		</div>
 	</div>
