@@ -116,13 +116,14 @@
     openLightBox(element, lightboxId) {
       $(`#${lightboxId}`)
         .find(".lightboxImage")
-        .attr("src", element.attr("src"));
+        .attr("src", element.find("img").attr("src"));
       $(`#${lightboxId}`).modal("toggle");
+      console.log(lightboxId);
     },
     prevImage() {
       let activeImage = null;
-      $("img.gallery-item").each(function () {
-        if ($(this).attr("src") === $(".lightboxImage").attr("src")) {
+      $("picture.gallery-item").each(function () {
+        if ($(this).find("img").attr("src") === $(".lightboxImage").attr("src")) {
           activeImage = $(this);
         }
       });
@@ -130,38 +131,35 @@
       let imagesCollection = [];
       if (activeTag === "all") {
         $(".item-column").each(function () {
-          if ($(this).children("img").length) {
-            imagesCollection.push($(this).children("img"));
+          if ($(this).children("picture").length) {
+            imagesCollection.push($(this).children("picture"));
           }
         });
       } else {
         $(".item-column").each(function () {
           if (
             $(this)
-              .children("img")
+              .children("picture")
               .data("gallery-tag") === activeTag
           ) {
-            imagesCollection.push($(this).children("img"));
+            imagesCollection.push($(this).children("picture"));
           }
         });
       }
       let index = 0,
-        next = null;
-
+        prev = null;
       $(imagesCollection).each(function (i) {
-        if ($(activeImage).attr("src") === $(this).attr("src")) {
+        if ($(activeImage).find("img").attr("src") === $(this).find("img").attr("src")) {
           index = i;
         }
       });
-      next =
-        imagesCollection[index - 1] ||
-        imagesCollection[imagesCollection.length - 1];
-      $(".lightboxImage").attr("src", $(next).attr("src"));
+      prev = imagesCollection[index - 1] || imagesCollection[imagesCollection.length - 1];
+      $(".lightboxImage").attr("src", $(prev).find("img").attr("src"));
     },
     nextImage() {
       let activeImage = null;
-      $("img.gallery-item").each(function () {
-        if ($(this).attr("src") === $(".lightboxImage").attr("src")) {
+      $("picture.gallery-item").each(function () {
+        if ($(this).find("img").attr("src") === $(".lightboxImage").attr("src")) {
           activeImage = $(this);
         }
       });
@@ -169,30 +167,30 @@
       let imagesCollection = [];
       if (activeTag === "all") {
         $(".item-column").each(function () {
-          if ($(this).children("img").length) {
-            imagesCollection.push($(this).children("img"));
+          if ($(this).children("picture").length) {
+            imagesCollection.push($(this).children("picture"));
           }
         });
       } else {
         $(".item-column").each(function () {
           if (
             $(this)
-              .children("img")
+              .children("picture")
               .data("gallery-tag") === activeTag
           ) {
-            imagesCollection.push($(this).children("img"));
+            imagesCollection.push($(this).children("picture"));
           }
         });
       }
       let index = 0,
         next = null;
       $(imagesCollection).each(function (i) {
-        if ($(activeImage).attr("src") === $(this).attr("src")) {
+        if ($(activeImage).find("img").attr("src") === $(this).find("img").attr("src")) {
           index = i;
         }
       });
       next = imagesCollection[index + 1] || imagesCollection[0];
-      $(".lightboxImage").attr("src", $(next).attr("src"));
+      $(".lightboxImage").attr("src", $(next).find("img").attr("src"));
     },
     createLightBox(gallery, lightboxId, navigation) {
       gallery.append(`<div class="modal fade" id="${lightboxId ? lightboxId : "galleryLightbox"
@@ -201,14 +199,14 @@
                     <div class="modal-content">
                         <div class="modal-body">
                             ${navigation
-          ? '<div class="mg-prev" style="cursor:pointer;position:absolute;top:50%;left:-15px;background:white;"></div>'
+          ? '<div class="mg-prev" style="cursor:pointer;position:absolute;top:50%;left:-15px;background:white;"><</div>'
           : '<span style="display:none;" />'
         }
-                            <picture>
+                            <picture>                            				
                             <img class="lightboxImage img-fluid" alt="Contenu de l'image affichée dans la modale au clique"/>
                             </picture>
                             ${navigation
-          ? '<div class="mg-next" style="cursor:pointer;position:absolute;top:50%;right:-15px;background:white;}"></div>'
+          ? '<div class="mg-next" style="cursor:pointer;position:absolute;top:50%;right:-15px;background:white;}">></div>'
           : '<span style="display:none;" />'
         }
                         </div>
